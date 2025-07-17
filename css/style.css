@@ -1,0 +1,234 @@
+/* ===============================
+   Global Styles – House of Fashion Admin
+   Theme: Black & Gold (Collapsed Sidebar Supported)
+================================*/
+
+:root {
+  --gold: #ffc107;
+  --black: #121212;
+  --gray-bg: #f6f9fc;
+  --white: #fff;
+  --text-dark: #212529;
+  --card-radius: 16px;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--gray-bg);
+  color: var(--text-dark);
+}
+
+/* ========== Sidebar ========== */
+/* Sidebar */
+    .sidebar {
+      height: 100vh;
+      background: #000;
+      padding: 30px 20px;
+      position: fixed;
+      width: 250px;
+      box-shadow: 2px 0 10px rgba(255, 215, 0, 0.2);
+      transition: 0.3s;
+      z-index: 999;
+    }
+
+    /* Hide logo text when sidebar is collapsed */
+.sidebar.collapsed .logo-text {
+  display: none;
+}
+
+/* Optional: center the logo icon when collapsed */
+.sidebar.collapsed .sidebar-logo {
+  text-align: center;
+}
+
+    .sidebar.collapsed {
+      width: 80px;
+    }
+
+    .sidebar h5 {
+      color: gold;
+      margin-bottom: 35px;
+      white-space: nowrap;
+    }
+
+    .sidebar .nav-link {
+      color: gold;
+      font-weight: 500;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      padding: 10px 15px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .sidebar.collapsed .nav-link span {
+      display: none;
+    }
+
+    .sidebar .nav-link:hover,
+    .sidebar .nav-link.active {
+      background: gold;
+      color: #000 !important;
+    }
+
+    .sidebar .dropdown-menu {
+      background-color: #1c1c1c;
+      border: 1px solid gold;
+    }
+
+    .sidebar .dropdown-menu a {
+      color: gold;
+    }
+
+    .sidebar .dropdown-menu a:hover {
+      background-color: gold;
+      color: black;
+    }
+
+      /* Fix misaligned arrow in sidebar dropdowns */
+  .sidebar .dropdown-toggle::after {
+    float: none;
+    margin-left: 6px;
+    vertical-align: middle;
+    font-size: 0.9rem;
+    color: var(--gold);
+    display: inline-block;
+    transform: translateY(-1px); /* adjust for fine-tuning */
+  }
+
+    /* Topbar */
+    .topbar {
+      height: 70px;
+      background-color: #fff;
+      padding: 10px 30px;
+      margin-left: 250px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 998;
+      border-bottom: 4px solid;
+      border-image: linear-gradient(to right, gold, orange) 1;
+      transition: 0.3s;
+    }
+
+    .topbar.collapsed {
+      margin-left: 80px;
+    }
+
+    .topbar .form-control {
+      display: inline-block;
+      width: auto;
+    }
+
+    /* Content */
+    .content {
+      margin-left: 250px;
+      padding: 30px;
+      transition: 0.3s;
+    }
+
+    .content.collapsed {
+      margin-left: 80px;
+    }
+
+        /* Show dropdowns when .show is added via JS */
+    #notifDropdown.show,
+    #profileDropdown.show {
+      display: block !important;
+    }
+
+    
+    /* Toggle Button */
+    .sidebar-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: gold;
+      margin-right: 15px;
+    }
+
+    .profile-icon {
+      font-size: 24px;
+      color: #333;
+      margin-left: 20px;
+    }
+/* ========== Content Area ========== */
+.content {
+  margin-left: 250px;
+  padding: 30px;
+  transition: 0.3s;
+}
+
+.content.collapsed {
+  margin-left: 80px;
+}
+
+/* ========== Cards & Boxes ========== */
+.card-box {
+  border-radius: var(--card-radius);
+  padding: 25px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card-box:hover {
+  transform: translateY(-5px);
+}
+
+.gradient-purple { background: linear-gradient(135deg, #7b2ff7, #f107a3); }
+.gradient-green { background: linear-gradient(135deg, #11998e, #38ef7d); }
+gradient-red    { background: linear-gradient(135deg, #f85032, #e73827); }
+.gradient-orange { background: linear-gradient(135deg, #f7971e, #ffd200); color: #333; }
+
+.card-custom {
+  border-radius: var(--card-radius);
+  background: var(--white);
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* ========== Headings & Buttons ========== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.btn-primary {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  color: black;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #e6b800;
+  border-color: #e6b800;
+  color: black;
+}
+
+.btn-outline-primary {
+  border-radius: 25px;
+  font-weight: 500;
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--gold);
+  color: black;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--gold);
+  margin-right: 15px;
+}
